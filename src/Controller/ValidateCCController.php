@@ -64,7 +64,7 @@ class  ValidateCCController
 
     public static function validatePhone($phone)
     {
-
+        return filter_var($phone, FILTER_VALIDATE_INT) !== false;
     }
 
     public static function validateCCV($ccv)
